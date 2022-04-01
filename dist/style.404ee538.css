@@ -1,0 +1,177 @@
+/*css reset*/
+* {
+    box-sizing: border-box;
+}
+
+*:before, *:after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%
+}
+
+/*再大也大不过容器*/
+/*style css*/
+body {
+    background-color: #EEEEEE
+}
+
+.globalHeader {
+    margin: 20px;
+
+}
+@media (min-width: 500px) {
+    .globalHeader{
+        margin: 60px 0;
+    }
+}
+
+.searchForm {
+    display: flex;
+    justify-content: space-between;
+}
+@media (min-width:500px) {
+    /*当大于500px才起作用,只管500以上的*/
+    .searchForm {
+        max-width: 400px;/*pc宽度用最大宽度*/
+        /*margin: 0 auto;当有最大宽度或宽度固定才能用margin: 0 auto*/
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+.searchForm > input {
+    width: 100%;
+    height: 40px;
+    margin-right: 20px;
+    padding: 0 10px;
+    border: none;
+    border-radius: 6px;
+}
+
+.searchForm > button {
+    white-space: nowrap;
+    padding: 0 22px;
+    border: none;
+    background: #12C2DA;
+    border-radius: 4px;
+    color: white;
+    font-size: 18px;
+}
+
+.globalMain {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.siteList {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;/*控制手机site距离左右边框宽度*/
+    justify-content: space-between;
+}
+@media (min-width: 500px) {
+    .siteList {
+        margin-right: -25px;
+        margin-left: 0;
+        justify-content: flex-start;/*pc覆盖掉*/
+    }
+}
+
+.siteList > li {
+    margin-bottom: 20px;
+}
+@media (min-width: 500px) {
+    .siteList > li {
+        margin-right: 25px;
+    }
+}
+.siteList .site {
+    width: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 20px 0;
+    position: relative;
+    cursor: pointer;
+}
+
+.siteList .site > .logo {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 64px;
+    text-shadow: 6px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.siteList .site > .link {
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+.siteList .site > .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: none;
+    cursor: default;
+}
+.siteList .site:hover > .close {
+    display: block;
+}
+.siteList .addButton {
+    width: 160px;
+    border: 1px solid #ddd;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 0;
+}
+
+.siteList .addButton .icon {
+    width: 64px;
+    height: 64px;
+
+}
+
+.siteList .addButton .text {
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+.siteList .addButton .iconWrapper {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*
+最小的元素可以写高度ex:text
+外面的可以用内容撑它
+*/
